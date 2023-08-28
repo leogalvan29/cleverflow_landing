@@ -1,0 +1,24 @@
+---
+const {datosLanding} = Astro.props 
+console.log(datosLanding) 
+
+ 
+--- 
+
+<div class="contenedor-componente">
+    <div class="txt-1 ">
+
+        <h1>{datosLanding.titulo_1}</h1>  
+        <p>{datosLanding.texto_1}</p>
+
+    </div>
+    <div class="img-1">
+        <img src={datosLanding.img_1.url} alt="">
+    </div>
+
+</div>        
+
+
+<script>
+ 
+</script>
