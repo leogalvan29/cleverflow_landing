@@ -1,0 +1,37 @@
+---
+const {datosLanding} = Astro.props 
+console.log(datosLanding)
+
+const {bmw,ford,dhl,disney,bbva,apple,paypal, nissan, nestle,pinol,bimbo,subway,santander, rappi, televisa, trident} = datosLanding.marcas
+
+---
+
+<div class="marcas w-full h-[1600px] md:h-[500px] py-6 mt-5">
+     <h1 class="text-center text-[#333333] text-[30px]">Nuestros Clientes</h1>
+     <div class="contenedor-marcas w-[90%] max-w-[1140px] mx-auto h-[1600px] md:h-[400px] flex flex-wrap items-center justify-center md:justify-between">
+         <img src={bmw.url} alt="#">
+         <img src={ford.url} alt="#">
+         <img src={dhl.url} alt="#">
+         <img src={disney.url} alt="#">
+         <img src={bbva.url} alt="#">
+         <img src={apple.url} alt="#">
+         <img src={paypal.url} alt="#">
+         <img src={nissan.url} alt="#">
+         <img src={nestle.url} alt="#">
+         <img src={pinol.url} alt="#">
+         <img src={bimbo.url} alt="#">
+         <img src={subway.url} alt="#">
+         <img src={santander.url} alt="#"> 
+         <img src={rappi.url} alt="#"> 
+         <img src={televisa.url} alt="#">
+     </div>
+</div>
+
+<style>
+    .contenedor-marcas img{
+        width: 200px;
+        height: 50px;
+    }
+</style>
+
+

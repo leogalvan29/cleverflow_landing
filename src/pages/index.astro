@@ -2,6 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Seccion1 from '../components/Seccion1.astro';
+import Seccion2 from '../components/Seccion2.astro';
+import Cta from '../components/Cta.astro';
+import Marcas from '../components/Marcas.astro';
 
 const data = await fetch('https://www.agenciadeinfluencersmexico.com/wp-json/wp/v2/pages?acf_format=standard')
 const datos = await data.json()
@@ -15,7 +18,17 @@ const datosLanding = datos[0].acf
 		<Seccion1
 		datosLanding={datosLanding}
 		/>
+		<Seccion2 
+		  datosLanding={datosLanding}
+		/>
+		
 	</main> 
+	<Cta 
+	 datosLanding={datosLanding}
+	/>
+	<Marcas
+	datosLanding={datosLanding}
+	/>
 </Layout>
  
 <style>

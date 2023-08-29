@@ -1,0 +1,32 @@
+---
+
+const {datosLanding} = Astro.props
+//console.log(datosLanding)
+
+---
+
+<div class="contenedor-agencias w-[100%] min-h-[1800px] md:min-h-[500px] h-auto py-4">
+     <div class="contenedor-2  w-[90%] mx-auto h-auto min-h-[1800px] md:min-h-[500px] md:max-w-[1140px] flex flex-wrap justify-around md:flex-row md:justify-between md:items-center ">
+         <div class="icono w-[100%] mx-auto md:w-[50%] flex flex-col items-center justify-center h-[400px] md:h-[300px]"> 
+            <img src={datosLanding.iconos.icono_search.url} alt="marketing influencer" class="w-[110px] md:w-[72px] ">
+            <h3 class="text-[26px] md:text-[20px] text-center">{datosLanding.iconos.titulo_search}</h3> 
+            <p class="text-center text-[#999999] w-[100%] md:w-[90%] mx-auto">{datosLanding.iconos.texto_search}</p>
+         </div>
+         <div class="icono w-[100%] mx-auto md:w-[50%] flex flex-col justify-center items-center h-[400px] md:h-[300px]"> 
+            <img src={datosLanding.iconos.icono_negociamos.url} alt="marketing de influencer" class="w-[110px] md:w-[72px] ">
+            <h3 class="text-[26px] md:text-[20px] text-center">{datosLanding.iconos.titulo_negociamos}</h3> 
+            <p class="text-center text-[#999999] w-[100%] md:w-[90%] mx-auto ">{datosLanding.iconos.texto_negociamos}</p>
+         </div> 
+         <div class="icono w-[100%] mx-auto md:w-[50%] flex flex-col justify-center items-center h-[400px] md:h-[300px]"> 
+            <img src={datosLanding.iconos.icono_ayudamos.url} alt="agencia de marketing influencer mexico" class="w-[110px] md:w-[72px]">
+            <h3 class="text-[26px] md:text-[20px] text-center">{datosLanding.iconos.titulo_ayudamos}</h3> 
+            <p class="text-center text-[#999999] w-[100%] md:w-[90%] mx-auto">{datosLanding.iconos.texto_ayudamos}</p>
+         </div>
+         <div class="icono w-[100%] mx-auto md:w-[50%] flex flex-col justify-center items-center h-[400px] md:h-[300px]"> 
+            <img src={datosLanding.iconos.icono_medimos.url} alt="agencia de marketing influencer" class="w-[110px] md:w-[72px]">
+            <h3 class="text-[26px] md:text-[20px] text-center">{datosLanding.iconos.titulo_medimos}</h3> 
+            <p class="text-center text-[#999999] w-[100%] md:w-[90%] mx-auto">{datosLanding.iconos.texto_medimos}</p>
+         </div> 
+      
+     </div>     
+</div>    
