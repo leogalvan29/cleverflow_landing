@@ -5,6 +5,7 @@ import Seccion1 from '../components/Seccion1.astro';
 import Seccion2 from '../components/Seccion2.astro';
 import Cta from '../components/Cta.astro';
 import Marcas from '../components/Marcas.astro';
+import Footer from '../components/Footer.astro';
 
 const data = await fetch('https://www.agenciadeinfluencersmexico.com/wp-json/wp/v2/pages?acf_format=standard')
 const datos = await data.json()
@@ -29,9 +30,28 @@ const datosLanding = datos[0].acf
 	<Marcas
 	datosLanding={datosLanding}
 	/>
-</Layout>
+  <Footer 
+   datosLanding={datosLanding} 
+  />
+  <a href="https://api.whatsapp.com/send?phone=525563773062&text=Hola%20necesito%20informacion%20" class="contenedor-whats"> <img src={datosLanding.logo_whatsapp.url} alt="logo-whatsapp"></a>
  
+</Layout>
+  
 <style> 
+   
+    .contenedor-whats {
+		position: fixed;
+		bottom: 50%;
+		right: 2%;
+		cursor: pointer;
+	}
+
+	.contenedor-whats img {
+		width: 64px;
+		height: 64px;
+	}
+   
+  
 	/* main {
 		margin: auto;
 		padding: 1rem;

@@ -1,0 +1,29 @@
+---
+
+const logoFooter = "https://www.agenciadeinfluencersmexico.com/wp-content/uploads/2023/08/cleverflow_blanco.png"
+const {datosLanding} = Astro.props 
+console.log(datosLanding)
+---
+
+
+<footer class="w-full bg-[#000000] h-[200px] ">
+    <div class="contenido-footer w-[90%] mx-auto max-w-[1140px] h-[200px] flex flex-col-reverse justify-around items-center">
+        <div class="logo-footer flex flex-col justify-center items-center">
+          <img src="https://www.agenciadeinfluencersmexico.com/wp-content/uploads/2023/08/cleverflow_blanco.png" alt="logo-footer" class="w-[200px] md:w-[220px]">
+          <p class="text-white text-center">Todos los Derechos Reservados Cleverflow - 2023</p>
+        </div>
+        <div class="redes-footer flex flex-row justify-around items-center">
+            <a href="https://www.facebook.com/Cleverflow"><img src={datosLanding.logo_facebook.url} alt="logo-facebook"></a>
+            <a href="https://www.instagram.com/cleverflowmx/?igshid=MzRlODBiNWFlZA%3D%3D"><img src={datosLanding.logo_insta.url} alt="logo-instagram"></a>
+            
+        </div> 
+    </div>
+</footer>
+
+<style>
+    .redes-footer img {
+        width: 32px;
+        height: 32px;
+        margin: 0px 5px;
+    }
+</style>
